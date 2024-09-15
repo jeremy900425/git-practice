@@ -44,7 +44,7 @@
 - 如果變更複雜，可以加上更詳細的描述，說明為什麼進行這次修改。
 
 ### 其他範例：
-- 截錄自國外 AngularJS 團隊，由 https://ithelp.ithome.com.tw/articles/10228738 提供資料
+- 截錄自國外 AngularJS 團隊，由 https://ithelp.ithome.com.tw/articles/10228738 提供資料 \n
 Header: <type>(<scope>): <subject>
  - type: 代表 commit 的類別：feat, fix, docs, style, refactor, test, chore，必要欄位。
  - scope 代表 commit 影響的範圍，例如資料庫、控制層、模板層等等，視專案不同而不同，為可選欄位。
