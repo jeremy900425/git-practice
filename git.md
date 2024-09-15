@@ -44,17 +44,27 @@
 - 如果變更複雜，可以加上更詳細的描述，說明為什麼進行這次修改。
 
 ### 其他範例：
-- 截錄自國外 AngularJS 團隊，由 https://ithelp.ithome.com.tw/articles/10228738 提供資料 \n
-Header: <type>(<scope>): <subject>
- - type: 代表 commit 的類別：feat, fix, docs, style, refactor, test, chore，必要欄位。
- - scope 代表 commit 影響的範圍，例如資料庫、控制層、模板層等等，視專案不同而不同，為可選欄位。
- - subject 代表此 commit 的簡短描述，不要超過 50 個字元，結尾不要加句號，為必要欄位。
+- 截錄自國外 AngularJS 團隊，由 [iThome](https://ithelp.ithome.com.tw/articles/10228738) 提供資料
 
-Body: 72-character wrapped. This should answer:
- * Body 部份是對本次 Commit 的詳細描述，可以分成多行，每一行不要超過 72 個字元。
- * 說明程式碼變動的項目與原因，還有與先前行為的對比。
+#### Header: `<type>(<scope>): <subject>`
+- **type**: 代表 commit 的類別，必要欄位。可選類別如下：
+  - `feat`: 新功能
+  - `fix`: 修復 bug
+  - `docs`: 文件變更
+  - `style`: 代碼格式（不影響功能的修改）
+  - `refactor`: 代碼重構
+  - `test`: 添加測試
+  - `chore`: 其他雜項（如建構工具變更）
+- **scope**: 代表 commit 影響的範圍，例如資料庫、控制層、模板層等。此為可選欄位，具體範圍可依專案而定。
+- **subject**: 代表此 commit 的簡短描述，必要欄位，注意：
+  - 不要超過 50 個字元。
+  - 結尾不要加句號。
 
-Footer: 
- - 填寫任務編號（如果有的話）.
- - BREAKING CHANGE（可忽略），記錄不兼容的變動，
-   以 BREAKING CHANGE: 開頭，後面是對變動的描述、以及變動原因和遷移方法。
+#### Body:
+- Body 部分是對本次 commit 的詳細描述，建議使用 72 字符包裝（每行不超過 72 個字元）。  
+- 說明程式碼變動的項目與原因，還有與先前行為的對比。
+
+#### Footer:
+- 填寫任務編號（如果有的話）。
+- 如果有重大變更導致不兼容，使用 `BREAKING CHANGE` 標註，並描述變更內容、變更原因及遷移方法。格式如下：
+
