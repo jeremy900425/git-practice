@@ -60,6 +60,11 @@ One more things：
  commit物件：會顯示提交資訊、作者、提交者、提交時間、指向的 tree 物件等資訊
  如果進一步去查看 `51e59b0b6f164edeccfc6270027a317579c8e9b6` 會發現這就是本次提交的檔案，`8abfefc641b26d1baee49b562e168f04731f525f` 就是這個commit的爹爹，其餘就是作者以及commit message.
 
+ ```code
+～小總結～
+commit 也跟 blob & tree 一樣擁有 hash 值和一份實體檔案，透過 git cat-file -t hash_value ，可以直接查看該檔案中本次commit的詳細資訊
+```
+
 
 ## 4. **Branch**
 - **Branch** 是 Git 中的一條開發分支，它讓大家可以同時進行不同的開發。每個分支都是一個指向特定 commit 的指標。例如： `main` 就是其中一個分支。
@@ -90,11 +95,21 @@ One more things：
 ![alt text](/asset/branch4.png)
 你就會發現hash也跟著改了
 
+ ```code
+～小總結～
+分支都是在 `.git/refs/heads/` 下進行維護，其中 檔案名稱 ＝ 分支名稱 ，某格檔案下的 hash值就是該分支目前所處的 commit hash值
+```
+
 ## 5. **HEAD**
 - **HEAD** 是 Git 中的指標，指向我當前所在的分支或 commit。當我切換分支或回到舊的Commit，HEAD 也會隨之改變。
 
 - `HEAD`指標會參考 `.git/HEAD`，而這份 file 裡面寫著 `ref: refs/heads/main
-` 做過剛剛的branch lab 應該就知道 `refs/heads/main`是做什麼了吧？！
+` 做過剛剛的branch lab 應該就知道 `refs/heads/main` 是做什麼了吧？！
+
+ ```code
+～小總結～
+HEAD 直接 refs/heads/main 所記錄的 commit，也就是main紀錄著abc123，HEAD就指向abc123;main紀錄著xyz456，HEAD就指向xyz456
+```
 
 ---
 
