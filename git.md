@@ -64,6 +64,9 @@ One more things：
 ## 4. **Branch**
 - **Branch** 是 Git 中的一條開發分支，它讓大家可以同時進行不同的開發。每個分支都是一個指向特定 commit 的指標。例如： `main` 就是其中一個分支。
 
+### Lab for Branch. Question: 請問git 是如何保存branch的？
+首先確認
+
 ## 5. **HEAD**
 - **HEAD** 是 Git 中的指標，指向我當前所在的分支或 commit。當我切換分支或回到舊的Commit，HEAD 也會隨之改變。
 
