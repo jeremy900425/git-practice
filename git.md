@@ -65,7 +65,20 @@ One more things：
 - **Branch** 是 Git 中的一條開發分支，它讓大家可以同時進行不同的開發。每個分支都是一個指向特定 commit 的指標。例如： `main` 就是其中一個分支。
 
 ### Lab for Branch. Question: 請問git 是如何保存branch的？
-首先確認
+首先確認目前head只項最新的commit，hash值為 `134ba63067b54682ba9b85e2697380072d3e5153`
+
+可以前往 `.git/refs/heads/` 會發現有個 `main`檔案，點開就會發現記錄著 `134ba63067b54682ba9b85e2697380072d3e5153`
+
+接著使用以下指令新增一個分支
+
+    $ git branch test＿branch
+
+此時觀察資料夾 `.git/refs/heads/` ，會發現多了一個 `test_branch`檔案，點開也是記錄著一個hash值，如下所示<br>
+
+![alt text](/asset/branch.png)
+
+#### One more thing：如果輸入 `git reset hash_value` 到之前的版號，可以發現 `.git/refs/heads/main` 中的hash值也會跟著變化，這意味著git 使用這樣的方式記錄著「該branch指向的是哪一個commit」
+
 
 ## 5. **HEAD**
 - **HEAD** 是 Git 中的指標，指向我當前所在的分支或 commit。當我切換分支或回到舊的Commit，HEAD 也會隨之改變。
