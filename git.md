@@ -79,6 +79,14 @@ One more things：
 
 #### One more thing：如果輸入 `git reset hash_value` 到之前的版號，可以發現 `.git/refs/heads/main` 中的hash值也會跟著變化，這意味著git 使用這樣的方式記錄著「該branch指向的是哪一個commit」
 
+例如現在 `HEAD` 指向 `676e`, branch 指向 `a17e`
+![alt text](image.png)
+---
+會發現兩個file的hash值有符合
+![alt text](image-1.png)
+
+接下來把HEAD reset到之前的版本 `60138fd7af766a7af08e7cb808e0ee04b629899a`
+
 
 ## 5. **HEAD**
 - **HEAD** 是 Git 中的指標，指向我當前所在的分支或 commit。當我切換分支或回到舊的Commit，HEAD 也會隨之改變。
