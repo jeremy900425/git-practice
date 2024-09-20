@@ -6,6 +6,21 @@
 ## 2. **Tree**
 - **Tree** 是用來表示目錄的資料結構。它包含檔案（blob）和資料夾（其他 tree）。Tree 就像是一個資料夾，它告訴我們有哪些檔案，這些檔案指向的是哪些 blob。
 
+### Lab for Blob & Tree
+    $ cd 專案資料夾
+    $ git ls-tree HEAD
+    # 這裡的 HEAD 可改為其他commit的hash值 e.g. a1b2c3d4
+此時可以看到如下資訊
+![alt text](image.png)
+
+這時我修改README.md的內容，並送出一個commit，並重新書入 “git ls-tree HEAD” 指令
+可以發現README.md 的 blob值被更改了
+![alt text](image.png)
+
+
+
+
+
 ## 3. **Commit**
 - **Commit** 是一個儲存點，記錄了檔案在某個時間點的狀態。每次提交（commit）後，Git 都會記住當前的檔案和目錄狀態，方便未來查詢。
 
