@@ -11,11 +11,11 @@
     $ git ls-tree HEAD
     # 這裡的 HEAD 可改為其他commit的hash值 e.g. a1b2c3d4
 此時可以看到如下資訊
-![alt text](image.png)
+![alt text](asset/image.png)
 
 這時我修改README.md的內容，並送出一個commit，並重新書入 “git ls-tree HEAD” 指令
 可以發現README.md 的 blob值被更改了
-![alt text](image_cc.png)
+![alt text](asset/image_cc.png)
 
 接下來，我們來看看 tree是什麼
 
@@ -25,7 +25,7 @@
     $ 提交一次commit
     $ git ls-tree HEAD
 可以得到以下結果
-![](image-1.png)
+![](asset/image-1.png)
 此時可以發現"資料夾"被用tree的方式儲存
 
 One more things：
