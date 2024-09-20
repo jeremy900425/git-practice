@@ -34,10 +34,32 @@ One more things：
   - 100755：可執行文件，擁有者可讀寫執行，其他人可讀和執行。
   - 040000：目錄。
 
-
-
+```code
+～小總結～
+只要某個資料夾裡面有 N 個 file or folder，那 blob + tree 的數量一定會等於 N
+並且 blob 和 folder 都是使用 SHA-1 編碼而成的，只要檔案變更過git就會賦予新的SHA-1值
+```
 ## 3. **Commit**
 - **Commit** 是一個儲存點，記錄了檔案在某個時間點的狀態。每次提交（commit）後，Git 都會記住當前的檔案和目錄狀態，方便未來查詢。
+
+#### Lab for commit. Question：每次commit時，git 是如何記錄資訊的？
+使用 `git log` 可以看到以下內容
+![alt text](asset/gitlog1.png)
+可以發現也有hash值為 `60138fd7af766a7af08e7cb808e0ee04b629899a` <br>
+我們使用以下指令去該檔案中查看其內容
+
+    $ git cat-file -t 60138fd7af766a7af08e7cb808e0ee04b629899a
+        tree 51e59b0b6f164edeccfc6270027a317579c8e9b6
+        parent 8abfefc641b26d1baee49b562e168f04731f525f
+        author jeremy900425 <jeremy900425@gmail.com> 1726810000 +0800
+        committer jeremy900425 <jeremy900425@gmail.com> 1726810000 +0800
+        hot fix screanshot cant display on git.md file
+
+    $ git cat-file -p 60138fd7af766a7af08e7cb808e0ee04b629899a
+        commit
+ commit物件：會顯示提交資訊、作者、提交者、提交時間、指向的 tree 物件等資訊
+ 如果進一步去查看 `51e59b0b6f164edeccfc6270027a317579c8e9b6` 會發現這就是本次提交的檔案，`8abfefc641b26d1baee49b562e168f04731f525f` 就是這個commit的爹爹，其餘就是作者以及commit message.
+
 
 ## 4. **Branch**
 - **Branch** 是 Git 中的一條開發分支，它讓大家可以同時進行不同的開發。每個分支都是一個指向特定 commit 的指標。例如： `main` 就是其中一個分支。
