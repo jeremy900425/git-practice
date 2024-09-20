@@ -15,9 +15,24 @@
 
 這時我修改README.md的內容，並送出一個commit，並重新書入 “git ls-tree HEAD” 指令
 可以發現README.md 的 blob值被更改了
-![alt text](image.png)
+![alt text](image_cc.png)
 
+接下來，我們來看看 tree是什麼
 
+    $ mkdir testfor tree
+    $ cd testfortree
+    $ touch test.txt
+    $ 提交一次commit
+    $ git ls-tree HEAD
+可以得到以下結果
+![](image-1.png)
+此時可以發現"資料夾"被用tree的方式儲存
+
+One more things：
+- 你應該注意到了圖片最左邊有 100644, 040000的編號的用途是Git 中的文件模式（file mode），它們表示文件或目錄的權限和類型。這些模式與 Unix/Linux 文件系統的權限模式類似，用來標記文件是普通檔案、可執行檔還是目錄。
+  - 100644：普通文件，擁有者可讀寫，其他人可讀。
+  - 100755：可執行文件，擁有者可讀寫執行，其他人可讀和執行。
+  - 040000：目錄。
 
 
 
