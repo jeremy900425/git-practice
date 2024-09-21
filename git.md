@@ -13,7 +13,7 @@
 此時可以看到如下資訊
 ![alt text](asset/image.png)
 
-這時我修改README.md的內容，並送出一個commit，並重新書入 “git ls-tree HEAD” 指令
+這時我修改README.md的內容，並送出一個commit，並重新輸入 “git ls-tree HEAD” 指令
 可以發現README.md 的 blob值被更改了
 ![alt text](asset/image_cc.png)
 
@@ -70,7 +70,7 @@ commit 也跟 blob & tree 一樣擁有 hash 值和一份實體檔案，透過 gi
 - **Branch** 是 Git 中的一條開發分支，它讓大家可以同時進行不同的開發。每個分支都是一個指向特定 commit 的指標。例如： `main` 就是其中一個分支。
 
 ### Lab for Branch. Question: 請問git 是如何保存branch的？
-首先確認目前head只項最新的commit，hash值為 `134ba63067b54682ba9b85e2697380072d3e5153`
+首先確認目前head指向最新的commit，hash值為 `134ba63067b54682ba9b85e2697380072d3e5153`
 
 可以前往 `.git/refs/heads/` 會發現有個 `main`檔案，點開就會發現記錄著 `134ba63067b54682ba9b85e2697380072d3e5153`
 
