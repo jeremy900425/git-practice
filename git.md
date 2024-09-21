@@ -19,7 +19,7 @@
 
 接下來，我們來看看 tree是什麼
 
-    $ mkdir testfor tree
+    $ mkdir testfortree
     $ cd testfortree
     $ touch test.txt
     $ 提交一次commit
