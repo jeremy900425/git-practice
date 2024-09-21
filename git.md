@@ -14,7 +14,7 @@
 ![alt text](asset/image.png)
 
 這時我修改README.md的內容，並送出一個commit，並重新輸入 “git ls-tree HEAD” 指令
-可以發現README.md 的 blob值被更改了
+可以發現README.md 的 blob值被更改了 ！！！這裡放錯圖稍晚會修正
 ![alt text](asset/image_cc.png)
 
 接下來，我們來看看 tree是什麼
