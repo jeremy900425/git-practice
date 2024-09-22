@@ -14,7 +14,7 @@
 ![alt text](asset/image.png)
 
 這時我修改README.md的內容，並送出一個commit，並重新輸入 “git ls-tree HEAD” 指令
-可以發現README.md 的 blob值被更改了 ！！！這裡放錯圖稍晚會修正
+可以發現README.md 的 blob值被更改了 
 ![alt text](asset/image_cc.png)
 
 接下來，我們來看看 tree是什麼
@@ -36,13 +36,13 @@ One more things：
 
 ```code
 ～小總結～
-只要某個資料夾裡面有 N 個 file or folder，那 blob + tree 的數量一定會等於 N
+以Lab的設定來說，新增2個檔案+1個資料夾，git就會用2個blob以及1個tree object來記錄資訊
 並且 blob 和 folder 都是使用 SHA-1 編碼而成的，只要檔案變更過git就會賦予新的SHA-1值
 ```
 ## 3. **Commit**
 - **Commit** 是一個儲存點，記錄了檔案在某個時間點的狀態。每次提交（commit）後，Git 都會記住當前的檔案和目錄狀態，方便未來查詢。
 
-#### Lab for commit. Question：每次commit時，git 是如何記錄資訊的？
+### Lab for commit. <br>Question：每次commit時，git 是如何記錄資訊的？
 使用 `git log` 可以看到以下內容
 ![alt text](asset/gitlog1.png)
 可以發現也有hash值為 `60138fd7af766a7af08e7cb808e0ee04b629899a` <br>
@@ -69,7 +69,7 @@ commit 也跟 blob & tree 一樣擁有 hash 值和一份實體檔案，透過 gi
 ## 4. **Branch**
 - **Branch** 是 Git 中的一條開發分支，它讓大家可以同時進行不同的開發。每個分支都是一個指向特定 commit 的指標。例如： `main` 就是其中一個分支。
 
-### Lab for Branch. Question: 請問git 是如何保存branch的？
+### Lab for Branch. <br>Question: 請問git 是如何保存branch的？
 首先確認目前head指向最新的commit，hash值為 `134ba63067b54682ba9b85e2697380072d3e5153`
 
 可以前往 `.git/refs/heads/` 會發現有個 `main`檔案，點開就會發現記錄著 `134ba63067b54682ba9b85e2697380072d3e5153`
