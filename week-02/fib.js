@@ -1,5 +1,3 @@
-const { logLevel } = require("kafkajs");
-
 function fib_recursive(n) {
     // TODO: implement fibonacci
     //定義 首兩項n0,n1為 0,1
