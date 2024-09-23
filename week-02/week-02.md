@@ -28,5 +28,24 @@ ChatGPT回答：
     NPM：是 Node.js 的套件管理器，用來安裝、更新、管理 JavaScript 的庫和模組。
 
 
-## 思考：程式題 sum 不可使用for, while的話 <br>有幾種寫法？如果給根據輸入的陣列動態加總要如何做到？
+## 思考：程式題 sum 不可使用for, while的話 <br>有幾種寫法？
+撇除使用外部套件的方法，我第一時間能想到的是使用遞迴的方式去寫，因為for, while 都是屬於讓程式重複性做某個指令，而遞迴其實也是用重複呼叫function來達到一樣的事情。<br>
+而遞迴要怎麼去寫？我寫了兩個function為 sum_obj ,sum_index 前者是有使用到ary物件本身的方法,而sum_index是使用控制ary的index 來進行加總。
 
+## 思考：如果 sum 函式的 input 是 n，然後要回傳 1 + 2 + 3 + … + n 的話，一樣不能用 for, while 寫，要怎麼做？
+這題我會一樣會使用遞迴的方式去寫，當然最好還是用數學的公式來算會比較快 (時間複雜度較低)
+```javascript
+function sum_recursive(n) {
+    if (n <= 1) {
+        return n;
+    }
+    return n + sum_recursive(n - 1);
+}
+
+function sum_formula(n) {
+    return (n * (n + 1)) / 2;
+}
+
+console.log(sum_recursive(5));
+console.log(sum_formula(5));
+```

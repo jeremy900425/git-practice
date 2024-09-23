@@ -1,5 +1,6 @@
 function fib_recursive(n) {
     // TODO: implement fibonacci
+    // 這裡的遞迴方法時間複雜度為O(2^n)，我跑N=50的時候就已經跑不動了
     //定義 首兩項n0,n1為 0,1
     if (n == 0) {
         return 0;
@@ -13,12 +14,18 @@ function fib_recursive(n) {
 }
 
 function fib_forloop(n) {
+    // 儲存當前答案的前一位數字 設為0也代表n0 = 0
     let lastValue = 0;
+    // 儲存當前答案
     let ans = 1;
+    // 為了保留當前答案
     let temp = 0;
+
+    // 如果n=0 直接回傳lastValue即可
     if (n == 0) {
         return console.log(lastValue);
     }
+    // 這裡的算法類似於Shift Array
     for (let i =1;i<n;i++){
         temp = ans;
         ans = ans + lastValue;
