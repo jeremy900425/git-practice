@@ -49,3 +49,45 @@ function sum_formula(n) {
 console.log(sum_recursive(5));
 console.log(sum_formula(5));
 ```
+
+## Issue：(node:21376) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+
+Nodejs 有兩個模組系統 `CommonJS` 和 `ES Modules`
+### CommonJS 模組系統
+- CommonJS 是 Node.js 中較早的模組系統，也是 Node.js 的預設模組系統。
+- 語法： 使用 require 來匯入模組，使用 module.exports 或 exports 來匯出模組。
+```Javascript
+// 定義模組 (moduleA.js)
+const hello = 'Hello, CommonJS!';
+module.exports = hello;
+
+// 使用模組 (main.js)
+const hello = require('./moduleA.js');
+console.log(hello);  // 輸出 "Hello, CommonJS!"
+```
+
+### ES Modules（ESM）模組系統
+- ES Modules 是近代比較常用模組系統，尤其是與瀏覽器相容。
+- 瀏覽器和 Node.js 都支援 ES Modules。對於前端和後端共享程式碼的專案（如 Isomorphic/Universal JavaScript 應用程式），ESM 能讓開發者使用相同的模組系統，降低維護成本。
+- 語法： 使用 import 來匯入模組，使用 export 來匯出模組。
+```Javascript
+// 定義模組 (moduleA.mjs)
+export const hello = 'Hello, ES Modules!';
+
+// 使用模組 (main.mjs)
+import { hello } from './moduleA.mjs';
+console.log(hello);  // 輸出 "Hello, ES Modules!"
+```
+### 為什麼要改成 ES Modules ?
+- JavaScript 的官方標準
+- 瀏覽器和 Node.js 的一致性
+- 模組的靜態分析
+  - 這意味著在Compile Period可以確定所有的關係
+  - 動態分析依賴於程式實際運行時的狀態和行為，而不是單純依賴於程式碼本身。
+- 更好地支持工具和框架
+  - 許多新的開發工具和框架（例如 Rollup、Snowpack、Vite）都更傾向於使用 ESM。
+### 什麼時候選擇 CommonJS？
+ESM 正逐漸成為標準，但在某些情況下，仍然可能選擇使用 CommonJS：
+- 需要支援非常舊的 Node.js 版本（如 Node.js 10 或更低）。
+- 專案仍然使用 CommonJS，且轉換為 ESM 會引入大量的開發成本。
+- 進行POC，省去額外的設定。因CommonJS 是 Node.js 的預設模組系統
