@@ -91,3 +91,9 @@ ESM 正逐漸成為標準，但在某些情況下，仍然可能選擇使用 Com
 - 需要支援非常舊的 Node.js 版本（如 Node.js 10 或更低）。
 - 專案仍然使用 CommonJS，且轉換為 ESM 會引入大量的開發成本。
 - 進行POC，省去額外的設定。因CommonJS 是 Node.js 的預設模組系統
+
+## Issue: 什麼是 `DS_Store` ? 需要加入版本控制嗎？
+ `.DS_Store` 是 MacOS 作業系統專屬的隱藏文件，英文全稱為「Desktop Services Store」。`.DS_Store` 裡面主要儲存了一些資訊，**例如：資料夾的圖標、視窗的設置等等**。因此 .DS_Store 在每一個資料夾內都有，基本上就是隨處可見的等級了，但 .DS_Store 並不會佔用太多記憶體空間，所以通常來講是不用去特別理會它。
+### 是否要加入版本控制？
+因為會包含一些該資料夾的 Meta Data，所以是不建議放。
+使用 `.gitignore` 設定不要把 `.DS_Store` 加入版控
