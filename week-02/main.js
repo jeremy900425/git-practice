@@ -10,7 +10,7 @@ stack.print();  // 預期輸出 "5,8" 表示 stack 內的 element
 
 // TODO: 應該還要做哪些測試，以驗證自己開發的 stack 是沒有問題的？
 
-// 以下測試功能是否正常
+// 以下單純玩玩看測試功能是否正常
 stack.size();  // 目前為止 stack 有兩個 element
 stack.peek();  // 8是最後push的，所以8是目前 stack 頂部的 element
 stack.pop();  // 移除頂部的 element 8
