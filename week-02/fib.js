@@ -5,13 +5,12 @@ function fib_recursive(n) {
     if (n == 0) {
         return 0;
     }
-    else if (n == 1) {
+    if (n == 1) {
         return 1;
     }
-    else {
         return fib_recursive(n-1) + fib_recursive(n-2);
-    }
 }
+
 
 function fib_forloop(n) {
     // 儲存當前答案的前一位數字 設為0也代表n0 = 0
