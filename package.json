@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "assert": "^2.1.0",
-    "kafkajs": "^2.2.4"
-  }
-}
