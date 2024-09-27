@@ -1,2 +1,2 @@
 .DS_Store
-*.json
+.backend/node_modules
