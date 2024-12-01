@@ -69,7 +69,7 @@
  - 安裝 Nginx：
     ```bash
     sudo apt install nginx -y
-    udo systemctl start nginx
+    sudo systemctl start nginx
     ```
  -  安裝 Node.js 和 PM2
     ```bash
