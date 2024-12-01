@@ -55,7 +55,7 @@
    -  OS : Ubuntu 24.04 
    -  Instance type : t2.micro
    -   22 (SSH) 端口 : 透過 22 端口使用 SSH 來連線並控制 EC2 主機。當使用以下命令時，就是通過 22 端口來進行通訊的：`ssh -i your-key.pem ubuntu@your-public-ip`
-   -   80 (HTTP) 端口：當你在瀏覽器中輸入你的 EC2 Public IP（例如 http://your-public-ip）時，Nginx 會透過 80 端口接收這個請求並將其轉發給後端（如 Node.js）。然後，後端會處理 Request，最後透過 80 端口返回給瀏覽器，顯示網頁內容。
+   -   80 (HTTP) 端口：當你在瀏覽器中輸入你的 EC2 Public IP（例如 http://your-public-ip）時，Nginx 會透過 80 端口接收這個請求並將其轉發給後端（如 Node.js）。然後，後端會處理 Request，最後透過 80 端口返回給瀏覽器，顯示網頁內容。 所以說 Security Group 必須設定HTTP TCP 80 0.0.0.0/0
  -  SSH 連接 EC2 主機
     -  使用下載的 .pem ，透過 SSH 連接到 EC2 ：
        -  `ssh -i your-key.pem ubuntu@your-public-ip`
