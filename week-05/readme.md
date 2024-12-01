@@ -1,11 +1,11 @@
 # Week-05 作業
 
 ## 相關連結
-[15.168.177.236](http://15.168.177.236 )
+[98.84.175.100](http://98.84.175.100)
 
 [http://www.jeremy900425.me](http://www.jeremy900425.me )
 
-[https://www.jeremy900425.me](https://www.jeremy900425.me )
+[https://www.jeremy900425.me](https://www.jeremy900425.me ) > 之前因為被課金，有把 EC2 重新架一次但就沒重新做SSL的東西
 
 ## 關於「購買網域」以及加上「SSL」的步驟以及遇到的問題
 
