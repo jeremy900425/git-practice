@@ -1,4 +1,4 @@
-# Week-04 作業 ( Instance Public IP [15.168.177.236](http://15.168.177.236 ) )
+# Week-04 作業 ( Instance Public IP [98.84.175.100](http://98.84.175.100) )
 ## 關於 建立 EC2 instance 遇到或想到的 issue
 1. 須先將密鑰檔案的權限設置為只允許擁有者讀取檔案，從而符合 SSH 的安全要求。
     ```bash
